@@ -9,7 +9,7 @@ USER node
 RUN mkdir -p DNportal
 RUN mkdir -p messanger
 
-COPY --chown=node:node ./master ./DNportal
+COPY --chown=node:node ./DNportal ./DNportal
 COPY ./messanger ./messanger
 COPY ./dnportal-docker/wrapper-script.sh .
 
