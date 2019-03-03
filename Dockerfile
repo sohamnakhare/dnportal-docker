@@ -13,7 +13,7 @@ COPY --chown=node:node ./DNportal ./DNportal
 COPY ./messanger ./messanger
 COPY ./dnportal-docker/wrapper-script.sh .
 
-RUN cd DNportal && npm install && cd .. && cd messanger && npm install
+RUN cd DNportal && npm install && npm run webpack  && cd .. && cd messanger && npm install
 
 EXPOSE 8000
 EXPOSE 8001
